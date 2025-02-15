@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estructuras de Datos - IvanCode</title>
+    <title>Herencia - IvanCode</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../styles/custom.css">
 </head>
@@ -15,26 +15,34 @@
     </nav>
 
     <section class="container py-5">
-        <h1 class="text-center mb-4">Estructuras de Datos</h1>
+        <h1 class="text-center mb-4">Herencia en POO</h1>
         <div class="row">
             <div class="col-md-8 mx-auto">
-                <h3>¿Qué son las Estructuras de Datos?</h3>
+                <h3>¿Qué es Herencia?</h3>
                 <p>
-                    Las estructuras de datos son formas de organizar y almacenar datos en una computadora para que puedan ser utilizados de manera eficiente. Algunas de las estructuras de datos más comunes son:
+                    La herencia permite que una clase herede atributos y métodos de otra clase.
+                    Esto promueve la reutilización de código y la organización jerárquica.
                 </p>
-                <ul>
-                    <li><strong>Arrays:</strong> Una colección de elementos almacenados en posiciones contiguas de memoria.</li>
-                    <li><strong>Listas Enlazadas:</strong> Una secuencia de nodos donde cada nodo contiene datos y una referencia al siguiente nodo.</li>
-                    <li><strong>Pilas:</strong> Una estructura LIFO (Last In, First Out) donde el último elemento añadido es el primero en ser eliminado.</li>
-                    <li><strong>Colas:</strong> Una estructura FIFO (First In, First Out) donde el primer elemento añadido es el primero en ser eliminado.</li>
-                    <li><strong>Árboles:</strong> Una estructura jerárquica donde cada nodo tiene un valor y referencias a nodos hijos.</li>
-                </ul>
 
-                <h4>Ejemplo de un Array en JavaScript</h4>
-                <pre><code>const frutas = ["Manzana", "Banana", "Naranja"];
-console.log(frutas[0]); // Muestra "Manzana"
-frutas.push("Uva"); // Añade "Uva" al final del array
-console.log(frutas); // Muestra ["Manzana", "Banana", "Naranja", "Uva"]</code></pre>
+                <h4>Ejemplo en Código</h4>
+                <pre><code>class Animal {
+    constructor(nombre) {
+        this.nombre = nombre;
+    }
+
+    emitirSonido() {
+        return "Sonido genérico";
+    }
+}
+
+class Perro extends Animal {
+    emitirSonido() {
+        return "Guau!";
+    }
+}
+
+const miPerro = new Perro("Buddy");
+return miPerro.emitirSonido(); // "Guau!"</code></pre>
 
             <div class="alert alert-info mt-4">
                 <h4>¿Cómo funciona el editor?</h4>
@@ -71,6 +79,7 @@ return saludo;</code></pre>
         </div>
     </section>
 
+    <!-- Vincular el archivo JavaScript compartido -->
     <script src="../js/code-executor.js"></script>
 </body>
 </html>
