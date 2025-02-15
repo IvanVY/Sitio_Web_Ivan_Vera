@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polimorfismo - CodeMaster</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/custom.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">🏠 Volver</a>
+        </div>
+    </nav>
+
+    <section class="container py-5">
+        <h1 class="text-center mb-4">Polimorfismo</h1>
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <h3>¿Qué es Polimorfismo?</h3>
+                <p>
+                    El polimorfismo permite que un método tenga múltiples implementaciones.
+                    En POO, esto significa que diferentes clases pueden tener métodos con el mismo nombre pero comportamientos distintos.
+                </p>
+
+                <h4>Ejemplo en Código</h4>
+                <pre><code>class Animal {
+    emitirSonido() {
+        return "Sonido genérico";
+    }
+}
+
+class Perro extends Animal {
+    emitirSonido() {
+        return "Guau!";
+    }
+}
+
+class Gato extends Animal {
+    emitirSonido() {
+        return "Miau!";
+    }
+}
+
+const animales = [new Animal(), new Perro(), new Gato()];
+animales.forEach(animal => console.log(animal.emitirSonido())); // Muestra en la consola
+return animales.map(animal => animal.emitirSonido()); // Muestra en la página
+</code></pre>
+
+                <div class="alert alert-info mt-4">
+                    <h4>¿Cómo funciona el editor?</h4>
+                    <p>
+                        Escribe tu código en el editor y haz clic en <strong>Ejecutar</strong> para ver el resultado.
+                        Para mostrar un valor en la página, usa <code>return</code>. Por ejemplo:
+                    </p>
+                    <pre><code>const saludo = "Hola, mundo!";
+return saludo;</code></pre>
+                    <p>
+                        Si quieres depurar tu código o ver múltiples resultados, usa <code>console.log</code>.
+                        Los mensajes de <code>console.log</code> se mostrarán en la consola del navegador.
+                    </p>
+                </div>
+
+                <h4>Prueba tú mismo</h4>
+                <textarea id="code-editor" class="form-control" rows="5" placeholder="Escribe tu código aquí..."></textarea>
+                <button id="run-code" class="btn btn-primary mt-3">Ejecutar</button>
+                <div id="output" class="mt-3 p-3 bg-dark text-white rounded"></div>
+
+                <div class="alert alert-warning mt-4">
+                    <h4>¿Cómo acceder a la consola del navegador?</h4>
+                    <p>
+                        Si usaste <code>console.log</code>, revisa la consola del navegador para ver los mensajes.
+                        Aquí te explicamos cómo acceder a ella:
+                    </p>
+                    <ul>
+                        <li><strong>Chrome:</strong> Presiona <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>J</kbd> (Windows/Linux) o <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>J</kbd> (Mac).</li>
+                        <li><strong>Firefox:</strong> Presiona <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>K</kbd> (Windows/Linux) o <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>K</kbd> (Mac).</li>
+                        <li><strong>Edge:</strong> Presiona <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> (Windows/Linux) o <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>I</kbd> (Mac).</li>
+                        <li><strong>Safari:</strong> Presiona <kbd>Cmd</kbd> + <kbd>Option</kbd> + <kbd>C</kbd> (Mac).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vincular el archivo JavaScript compartido -->
+    <script src="../js/code-executor.js"></script>
+</body>
+</html>
